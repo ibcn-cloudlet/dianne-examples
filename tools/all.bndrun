@@ -1,0 +1,28 @@
+##
+#
+# DIANNE complete bndrun 
+#
+# launches a node with DIANNE runtime, Learner, Evaluator, Coordinator, Build & Dashboard
+#
+#
+
+-include: core.bndrun
+
+-runbundles.all: \
+	be.iminds.aiolos.platformmanager;version=${aiolos.version},\
+	be.iminds.iot.dianne.nn.platform;version=${dianne.version},\
+	be.iminds.iot.dianne.repository;version=${dianne.version},\
+	be.iminds.iot.dianne.builder;version=${dianne.version},\
+	be.iminds.iot.dianne.command;version=${dianne.version},\
+	be.iminds.iot.dianne.jsonrpc;version=${dianne.version},\
+	be.iminds.iot.dianne.coordinator;version=${dianne.version},\
+	be.iminds.iot.dianne.dashboard;version=${dianne.version},\
+	be.iminds.iot.dianne.nn.runtime;version=${dianne.version},\
+	be.iminds.iot.dianne.nn.learn;version=${dianne.version},\
+	be.iminds.iot.dianne.nn.eval;version=${dianne.version},\
+	be.iminds.iot.dianne.rnn.learn;version=${dianne.version}
+
+-runproperties.all:\
+	be.iminds.iot.dianne.runtime.name="Dashboard",\
+	be.iminds.iot.dianne.storage="models",\
+	be.iminds.iot.dianne.datasets.location="datasets"

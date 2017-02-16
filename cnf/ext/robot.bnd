@@ -1,0 +1,18 @@
+#
+# -ROBOT REPO-
+# 
+# This file contains the setup for the ROBOT repository
+#
+
+
+#-plugin.robot.repo: \
+#    be.li.bnd.plugin.workspacerepo.WorkspaceRepository; \
+#    	path:="/home/tverbele/Data/code/li/be.li.bnd.plugin.workspacerepo/generated/be.li.bnd.plugin.workspacerepo.jar"; \
+#    	name=Robot; \
+#		location=/home/tverbele/Data/code/ros/rososgi
+
+-plugin.robot.repo: \
+	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		name=Robot; \
+		locations=http://aiolos.intec.ugent.be/repositories/be.iminds.iot.robot/index.xml;
+

@@ -1,0 +1,40 @@
+#
+# -CONCIERGE REPO-
+# 
+# This file contains the setup for the Concierge repository
+#
+
+-plugin.concierge.repo= \
+	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		name=Concierge; \
+		locations=http://aiolos.intec.ugent.be/repositories/org.eclipse.concierge/index.xml;
+	
+#TODO these packages are not required all the time ... generated -runsystempackages based on EE?	
+-runsystempackages.concierge: \
+	org.w3c.dom,\
+	org.xml.sax,\
+	org.xml.sax.helpers,\
+	javax.xml.namespace,\
+	javax.xml.parsers,\
+	javax.xml.transform,\
+	javax.xml.transform.sax,\
+	javax.xml.transform.stream,\
+	javax.xml.xpath,\
+	javax.xml.bind,\
+	javax.naming,\
+	javax.net.ssl,\
+	javax.security.auth,\
+	javax.security.cert,\
+	javax.crypto,\
+	javax.crypto.spec,\
+	javax.management,\
+	javax.management.modelmbean,\
+	javax.management.remote,\
+	javax.annotation,\
+	javax.annotation.meta,\
+	javax.imageio,\
+	javax.imageio.stream,\
+	javax.imageio.plugins.jpeg
+	
+-runproperties.concierge: \
+	org.osgi.framework.bootdelegation="sun.*"

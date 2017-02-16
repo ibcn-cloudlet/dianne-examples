@@ -1,0 +1,17 @@
+#
+# -DIANNE REPO-
+# 
+# This file contains the setup for the DIANNE repository
+#
+
+#-plugin.dianne.repo: \
+#    be.li.bnd.plugin.workspacerepo.WorkspaceRepository; \
+#    	path:="/home/tverbele/Data/code/li/be.li.bnd.plugin.workspacerepo/generated/be.li.bnd.plugin.workspacerepo.jar"; \
+#    	name=DIANNE; \
+#		location=/home/tverbele/Data/code/dianne
+
+
+-plugin.dianne.repo= \
+	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		name=Dianne; \
+		locations=http://aiolos.intec.ugent.be/repositories/be.iminds.iot.dianne/index.xml;

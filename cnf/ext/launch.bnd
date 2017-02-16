@@ -1,0 +1,12 @@
+#
+# -REMOTE REPO-
+# 
+# This file contains the setup for remote launching
+# (patched with preserving bundle order)
+#
+
+-plugin.launch.repo= \
+	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		name=Launch; \
+		locations=http://aiolos.intec.ugent.be/repositories/launch/index.xml;
+

@@ -1,0 +1,24 @@
+##
+#
+# DIANNE core bndrun 
+#
+# core DIANNE bundles
+#
+#
+
+dianne.version='[0.6.0,0.7.0)'
+
+-include: common.bndrun
+
+-runbundles.core: \
+	be.iminds.iot.dianne.tensor;version=${dianne.version},\
+	be.iminds.iot.dianne.tensor.native.torch.linux.x86_64;version=${dianne.version},\
+	be.iminds.iot.dianne.tensor.util;version=${dianne.version},\
+	be.iminds.iot.dianne.api;version=${dianne.version},\
+	be.iminds.iot.dianne.nn.util;version=${dianne.version},\
+	be.iminds.iot.dianne.nn.module;version=${dianne.version},\
+	be.iminds.iot.dianne.nn;version=${dianne.version},\
+	be.iminds.iot.dianne.dataset;version=${dianne.version},\
+	be.iminds.iot.dianne.rnn.module;version=${dianne.version},\
+	be.iminds.iot.dianne.rnn.dataset;version=${dianne.version},\
+	be.iminds.iot.dianne.rl.experience;version=${dianne.version}

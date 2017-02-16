@@ -1,2 +1,12 @@
-# dianne-examples
-Repository for DIANNE example models, jobs, etc.
+DIANNE examples
+===============
+
+Supervised learning
+-------------------
+
+Unsupervised learning
+---------------------
+  * [Variational Autoencoder](dianne.examples.vae/README.md)
+
+Reinforcement learning
+----------------------

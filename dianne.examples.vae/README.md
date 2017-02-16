@@ -1,0 +1,2 @@
+dianne:learn VAE_MNIST_encoder,VAE_MNIST_decoder MNIST autoencode=true range=0,59999 strategy=VariationalAutoEncoderLearningStrategy criterion=BCE latentDims=2 method=ADAM batchSize=128 sampleSize=1 maxIterations=100000 trace=true traceInterval=1
+dianne:eval VAE_MNIST_encoder,VAE_MNIST_decoder MNIST autoencode=true range=60000,69999 strategy=VariationalAutoEncoderEvaluationStrategy criterion=BCE latentDims=2 batchSize=128 includeOutputs=true trace=true

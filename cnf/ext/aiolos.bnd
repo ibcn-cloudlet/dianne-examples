@@ -1,0 +1,20 @@
+#
+# -AIOLOS REPO-
+# 
+# This file contains the setup for the AIOLOS repository
+#
+
+#-pluginpath.aiolos: /home/tverbele/Data/code/li/be.li.bnd.plugin.workspacerepo/generated/be.li.bnd.plugin.workspacerepo.jar
+
+
+#-plugin.aiolos.repo:\
+#	be.li.bnd.plugin.workspacerepo.WorkspaceRepository; \
+#	name=AIOLOS; \
+#	location=/home/tverbele/Data/code/aiolos	
+
+
+-plugin.aiolos.repo= \
+	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		name=AIOLOS; \
+		locations=http://aiolos.intec.ugent.be/repositories/be.iminds.aiolos/index.xml;
+
