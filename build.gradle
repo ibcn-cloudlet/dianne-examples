@@ -41,7 +41,7 @@ task("datasets") {
 	group 'util'
 	doLast {
 		def ds = project.hasProperty('which') ? project.properties['which'] + "/" : ""
-		def dir = project.properties['directory'] ?: "./tools/datasets/"
+		def dir = project.properties['directory'] ?: "datasets/"
 		
 		logger.info "Downloading dataset(s) {} to directory {}", ds , dir
 		
@@ -55,7 +55,7 @@ task("models") {
 	group 'util'
 	doLast {
 		def mod = project.hasProperty('which') ? project.properties['which'] + "/" : ""
-		def dir = project.properties['directory'] ?: "./tools/models/"
+		def dir = project.properties['directory'] ?: "models/"
 		
 		logger.info "Downloading model(s) {} to directory {}", mod , dir
 		

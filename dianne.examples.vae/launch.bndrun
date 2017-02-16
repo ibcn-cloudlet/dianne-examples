@@ -1,7 +1,7 @@
 
 
 
--include: ../tools/all.bndrun
+-include: ../cnf/all.bndrun
 
 -runproperties.vae:\
 	be.iminds.iot.dianne.runtime.name="VAE"

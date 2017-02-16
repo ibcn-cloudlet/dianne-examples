@@ -2,8 +2,8 @@
 /generated/
 enroute.zip
 .metadata
-/RemoteSystemsTempFiles/
+RemoteSystemsTempFiles/
 .DS_Store
 .recommenders
-tools/datasets/
+datasets/
 /jobs/
