@@ -1,0 +1,7 @@
+{
+	"name":"AtariPool",
+	"type":"MemoryExperiencePool",
+	"actionDims":[6],
+	"stateDims":[4, 84, 84],
+	"maxSize": 10000
+}

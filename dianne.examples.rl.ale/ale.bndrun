@@ -1,0 +1,18 @@
+
+
+
+-include: ../cnf/all.bndrun
+
+-runbundles.rl:  \
+	be.iminds.iot.dianne.rl.learn;version=${dianne.version},\
+	be.iminds.iot.dianne.rl.agent;version=${dianne.version},\
+	be.iminds.iot.dianne.rl.eval;version=${dianne.version},\
+	be.iminds.iot.dianne.rl.module;version=${dianne.version}
+
+-runbundles.ale: \
+	be.iminds.iot.dianne.rl.environment.ale;version=${dianne.version}
+
+-runproperties.overide:\
+	be.iminds.iot.dianne.runtime.name="ALE",\
+	be.iminds.iot.dianne.datasets.location="experience"
+	
