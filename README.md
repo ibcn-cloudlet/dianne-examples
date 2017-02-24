@@ -10,3 +10,4 @@ Unsupervised learning
 
 Reinforcement learning
 ----------------------
+  * [Deep Q Learning on Arcade Learning Environment](dianne.examples.rl.ale/README.md)
