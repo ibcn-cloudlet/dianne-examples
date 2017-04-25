@@ -16,6 +16,30 @@
       "name": "Frame",
       "category": "Preprocessing"
     },
+    "15c88225-fd8a-1a00-d984-2e2bdac88983": {
+      "id": "15c88225-fd8a-1a00-d984-2e2bdac88983",
+      "type": "Convolution",
+      "next": [
+        "d6b694ee-c007-5f48-72a1-66b8165b8eef"
+      ],
+      "prev": [
+        "d3f1a94b-ffe5-56da-bca1-b8cf732e1e2a"
+      ],
+      "noInputPlanes": "64",
+      "strideX": "1",
+      "kernelWidth": "3",
+      "trainable": "true",
+      "kernelHeight": "3",
+      "padX": "",
+      "noOutputPlanes": "64",
+      "padY": "",
+      "padZ": "",
+      "strideY": "1",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    },
     "3aceb86d-aaf0-ce05-19f5-1333f7f29016": {
       "id": "3aceb86d-aaf0-ce05-19f5-1333f7f29016",
       "type": "Convolution",
@@ -25,16 +49,21 @@
       "prev": [
         "a664b9ed-5855-78be-2807-801b895271a0"
       ],
-      "noOutputPlanes": "32",
-      "pad": "",
-      "strideY": "2",
-      "name": "Convolution",
-      "noInputPlanes": "16",
+      "noInputPlanes": "32",
       "strideX": "2",
-      "category": "Layer",
       "kernelWidth": "4",
       "trainable": "true",
-      "kernelHeight": "4"
+      "kernelHeight": "4",
+      "padX": "",
+      "noOutputPlanes": "64",
+      "pad": "",
+      "padY": "",
+      "padZ": "",
+      "strideY": "2",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
     },
     "7707b119-e856-2adf-7e9f-1f983e34dc83": {
       "id": "7707b119-e856-2adf-7e9f-1f983e34dc83",
@@ -43,13 +72,25 @@
         "e02a50ac-3019-5451-2ad7-bb7febd22938"
       ],
       "prev": [
-        "d3f1a94b-ffe5-56da-bca1-b8cf732e1e2a"
+        "d6b694ee-c007-5f48-72a1-66b8165b8eef"
       ],
-      "output": "256",
-      "input": "2592",
+      "output": "512",
+      "input": "3136",
       "name": "Linear",
       "category": "Layer",
       "trainable": "true"
+    },
+    "d6b694ee-c007-5f48-72a1-66b8165b8eef": {
+      "id": "d6b694ee-c007-5f48-72a1-66b8165b8eef",
+      "type": "ReLU",
+      "next": [
+        "7707b119-e856-2adf-7e9f-1f983e34dc83"
+      ],
+      "prev": [
+        "15c88225-fd8a-1a00-d984-2e2bdac88983"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
     },
     "57faf747-f9d6-0b78-4dfb-7e6684843d61": {
       "id": "57faf747-f9d6-0b78-4dfb-7e6684843d61",
@@ -70,7 +111,7 @@
         "e02a50ac-3019-5451-2ad7-bb7febd22938"
       ],
       "output": "6",
-      "input": "256",
+      "input": "512",
       "name": "Linear",
       "category": "Layer",
       "trainable": "true"
@@ -108,16 +149,21 @@
       "prev": [
         "f71315b7-6e2f-b198-1a0d-88f7cae09309"
       ],
-      "noOutputPlanes": "16",
-      "pad": "",
-      "strideY": "4",
-      "name": "Convolution",
       "noInputPlanes": "4",
       "strideX": "4",
-      "category": "Layer",
       "kernelWidth": "8",
       "trainable": "true",
-      "kernelHeight": "8"
+      "kernelHeight": "8",
+      "padX": "",
+      "noOutputPlanes": "32",
+      "pad": "",
+      "padY": "",
+      "padZ": "",
+      "strideY": "4",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
     },
     "08ec79b0-f5e3-aea1-09a7-3f4e7a03da5a": {
       "id": "08ec79b0-f5e3-aea1-09a7-3f4e7a03da5a",
@@ -133,7 +179,7 @@
       "id": "d3f1a94b-ffe5-56da-bca1-b8cf732e1e2a",
       "type": "ReLU",
       "next": [
-        "7707b119-e856-2adf-7e9f-1f983e34dc83"
+        "15c88225-fd8a-1a00-d984-2e2bdac88983"
       ],
       "prev": [
         "3aceb86d-aaf0-ce05-19f5-1333f7f29016"
