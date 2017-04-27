@@ -9,9 +9,10 @@
 	be.iminds.iot.dianne.rl.eval;version=${dianne.version},\
 	be.iminds.iot.dianne.rl.module;version=${dianne.version}
 
--runbundles.ale: \
-	be.iminds.iot.dianne.rl.environment.ale;version=${dianne.version}
+-runbundles.runtime.gym: \
+	jep;version='[3.6.0,3.7.0)',\
+	be.iminds.iot.dianne.rl.environment.gym;version=${dianne.version}
 
 -runproperties.override:\
-	be.iminds.iot.dianne.runtime.name="ALE",\
+	be.iminds.iot.dianne.runtime.name="GYM",\
 	be.iminds.iot.dianne.datasets.location="experience"

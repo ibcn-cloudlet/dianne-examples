@@ -1,0 +1,65 @@
+{
+  "name": "DeepLunar",
+  "modules": {
+    "0186c1b1-7783-54ec-b184-6e5361b3589c": {
+      "id": "0186c1b1-7783-54ec-b184-6e5361b3589c",
+      "type": "Input",
+      "next": [
+        "2fbd9671-8343-40ba-1de3-6990f5877240"
+      ],
+      "name": "Input",
+      "category": "Input-Output"
+    },
+    "c362e256-93aa-0712-6c4c-778b6086635d": {
+      "id": "c362e256-93aa-0712-6c4c-778b6086635d",
+      "type": "Output",
+      "prev": [
+        "1af9ee01-e688-a93d-ca1a-3b19cd17d090"
+      ],
+      "name": "Output",
+      "category": "Input-Output"
+    },
+    "2fbd9671-8343-40ba-1de3-6990f5877240": {
+      "id": "2fbd9671-8343-40ba-1de3-6990f5877240",
+      "type": "Linear",
+      "next": [
+        "eeb608e3-b6cb-3c6e-456b-b0e2d5ba2099"
+      ],
+      "prev": [
+        "0186c1b1-7783-54ec-b184-6e5361b3589c"
+      ],
+      "output": "100",
+      "input": "8",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "1af9ee01-e688-a93d-ca1a-3b19cd17d090": {
+      "id": "1af9ee01-e688-a93d-ca1a-3b19cd17d090",
+      "type": "Linear",
+      "next": [
+        "c362e256-93aa-0712-6c4c-778b6086635d"
+      ],
+      "prev": [
+        "eeb608e3-b6cb-3c6e-456b-b0e2d5ba2099"
+      ],
+      "output": "4",
+      "input": "100",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "eeb608e3-b6cb-3c6e-456b-b0e2d5ba2099": {
+      "id": "eeb608e3-b6cb-3c6e-456b-b0e2d5ba2099",
+      "type": "ReLU",
+      "next": [
+        "1af9ee01-e688-a93d-ca1a-3b19cd17d090"
+      ],
+      "prev": [
+        "2fbd9671-8343-40ba-1de3-6990f5877240"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"name":"ExperiencePool",
+	"type":"MemoryExperiencePool",
+	"actionDims":[4],
+	"stateDims":[8],
+	"maxSize":100000
+}

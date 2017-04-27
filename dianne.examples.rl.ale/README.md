@@ -1,6 +1,8 @@
 # Deep Q Learning on Arcade Learning Environment
 
-Deep Q Learning was presented by Mnih et al. [1] to learn an AI to play Atari games. This type of reinforcement learning is supported out of the box in DIANNE. 
+Deep Q Learning was presented by Mnih et al. [1] to learn an AI to play Atari games. This type of reinforcement learning is supported out of the box in DIANNE.
+
+Note: training a deep Q network for playing Atari games requires quite some compute power and time. To get started with deep reinforcement learning, take a look at the [OpenAI gym example](../dianne.examples.rl.gym/README.md).
 
 ## Starting DIANNE runtime
 
