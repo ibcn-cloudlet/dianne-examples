@@ -3,7 +3,7 @@ Datasets
 
 Put your datasets in separate subfolders named after the respective dataset.
 
-You can download some datasets at [http://dianne.intec.ugent.be/datasets/](http://dianne.intec.ugent.be/datasets/) or use the `./gradlew datasets --Pwhich=<name>` command from the root directory.
+You can download some datasets at [http://dianne.intec.ugent.be/datasets/](http://dianne.intec.ugent.be/datasets/) or use the `./gradlew datasets -Pwhich=<name>` command from the root directory.
 More information on datasets can be found in the [dataset documentation on GitHub](https://github.com/ibcn-cloudlet/dianne/blob/master/doc/datasets.md).
 
 Supported datasets:
