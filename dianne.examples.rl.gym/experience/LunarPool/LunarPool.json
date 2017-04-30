@@ -1,5 +1,5 @@
 {
-	"name":"ExperiencePool",
+	"name":"LunarPool",
 	"type":"MemoryExperiencePool",
 	"actionDims":[4],
 	"stateDims":[8],
