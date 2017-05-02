@@ -1,5 +1,5 @@
 {
-  "name": "VAE_MNIST_decoder",
+  "name": "Decoder",
   "modules": {
     "5ecf797d-5cdf-c553-5367-c0df8b46ac50": {
       "id": "5ecf797d-5cdf-c553-5367-c0df8b46ac50",
@@ -47,7 +47,7 @@
       "id": "307cf5ea-b5f0-cc96-79a9-c9e0328e46e4",
       "type": "Sigmoid",
       "next": [
-        "a66bbb5b-5f3f-f153-676e-7a3529ee533f"
+        "bf44efc5-076c-5848-62a5-f0df7df102c5"
       ],
       "prev": [
         "5ecf797d-5cdf-c553-5367-c0df8b46ac50"
@@ -59,7 +59,7 @@
       "id": "a66bbb5b-5f3f-f153-676e-7a3529ee533f",
       "type": "Output",
       "prev": [
-        "307cf5ea-b5f0-cc96-79a9-c9e0328e46e4"
+        "bf44efc5-076c-5848-62a5-f0df7df102c5"
       ],
       "name": "Output",
       "category": "Input-Output"
@@ -87,6 +87,21 @@
       ],
       "name": "ReLU",
       "category": "Activation"
+    },
+    "bf44efc5-076c-5848-62a5-f0df7df102c5": {
+      "id": "bf44efc5-076c-5848-62a5-f0df7df102c5",
+      "type": "Reshape",
+      "next": [
+        "a66bbb5b-5f3f-f153-676e-7a3529ee533f"
+      ],
+      "prev": [
+        "307cf5ea-b5f0-cc96-79a9-c9e0328e46e4"
+      ],
+      "dim2": "",
+      "dim1": "28",
+      "dim0": "28",
+      "name": "Reshape",
+      "category": "Layer"
     },
     "a5d43ff7-ffa3-b8d8-23ce-f060d4ca85e0": {
       "id": "a5d43ff7-ffa3-b8d8-23ce-f060d4ca85e0",

@@ -1,5 +1,5 @@
 {
-  "name": "VAE_MNIST_encoder",
+  "name": "Encoder",
   "modules": {
     "aeae662a-e925-ad68-8108-fa7855405e89": {
       "id": "aeae662a-e925-ad68-8108-fa7855405e89",
@@ -22,6 +22,21 @@
       "name": "Input",
       "category": "Input-Output"
     },
+    "b806e858-5ffb-b71e-b9f0-efd1e9d049eb": {
+      "id": "b806e858-5ffb-b71e-b9f0-efd1e9d049eb",
+      "type": "Multivariate Gaussian",
+      "next": [
+        "576468d0-4af3-6e50-3740-d48e7182fd10"
+      ],
+      "prev": [
+        "f27f05f3-d0a3-4312-317f-2882769f400c"
+      ],
+      "stdevActivation": "SoftPlus",
+      "size": "2",
+      "name": "Multivariate Gaussian",
+      "meanActivation": "",
+      "category": "Variational"
+    },
     "fd6d96de-e658-63ed-bd80-e29cb62ea136": {
       "id": "fd6d96de-e658-63ed-bd80-e29cb62ea136",
       "type": "Linear",
@@ -41,7 +56,7 @@
       "id": "f27f05f3-d0a3-4312-317f-2882769f400c",
       "type": "Linear",
       "next": [
-        "576468d0-4af3-6e50-3740-d48e7182fd10"
+        "b806e858-5ffb-b71e-b9f0-efd1e9d049eb"
       ],
       "prev": [
         "6b264e88-1563-93f6-ca1d-6e3f82eff7a8"
@@ -83,7 +98,7 @@
       "id": "576468d0-4af3-6e50-3740-d48e7182fd10",
       "type": "Output",
       "prev": [
-        "f27f05f3-d0a3-4312-317f-2882769f400c"
+        "b806e858-5ffb-b71e-b9f0-efd1e9d049eb"
       ],
       "name": "Output",
       "category": "Input-Output"

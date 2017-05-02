@@ -17,13 +17,43 @@ To let our neural networks output probability distributions while still being ab
 
 In order to train a VAE in DIANNE, you can use the VariationalAutoEncoderLearningStrategy. This strategy requires two neural networks, the encoder and decoder, and the dimension of the latent space. 
 
+To run this example, make sure you have the MNIST dataset in the datasets folder. You can download the MNIST dataset by executing the following build command in the root directory:
 ```
-dianne:learn VAE_MNIST_encoder,VAE_MNIST_decoder MNIST autoencode=true range=0,59999 strategy=VariationalAutoEncoderLearningStrategy criterion=BCE latentDims=2 method=ADAM batchSize=128 sampleSize=1 maxIterations=100000 trace=true traceInterval=1
+./gradlew datasets -Pwhich=MNIST
 ```
 
+As Encoder network, we use a 3 layer fully connected neural network with 512 hidden neurons in each layer. We will encode each sample to a 2 dimensional space, so our output is a 2d multivariate gaussian. Hence, the last Linear layer ends with 4 outputs, 2 means and 2 stdevs of the distribution.
+
+Similarly, we use a 3 layer fully connected neural network as Decoder. This neural net takes as input a latent sample of dimension 2, and outputs a probability for each pixels to be black or white. We reshape to a 28x28 image for visualization.
+
+Now we can train the networks using the VariationalAutoEncoderLearningStrategy using the following command: 
+
 ```
-dianne:eval VAE_MNIST_encoder,VAE_MNIST_decoder MNIST autoencode=true range=60000,69999 strategy=VariationalAutoEncoderEvaluationStrategy criterion=BCE latentDims=2 batchSize=128 includeOutputs=true trace=true
+dianne:learn Encoder,Decoder MNIST autoencode=true range=0,59999 strategy=VariationalAutoEncoderLearningStrategy criterion=BCE latentDims=2 method=ADAM batchSize=128 sampleSize=1 maxIterations=5000 trace=true traceInterval=1 tag=vae
 ```
+
+The command explained:
+
+* dianne:learn : we start a learn job
+* Encoder,Decoder : our learning strategy needs two neural net instances: an encoder and a decoder network
+* MNIST : we use the MNIST dataset to get the data 
+* autoencode=true : instead of the MNIST labels, we want to use the input sample as target instead of the label
+* range=0,59999 : we only use the train set (first 60000 samples) 
+* strategy=VariationalAutoEncoderLearningStrategy  : our VAE strategy
+* criterion=BCE : the decoder loss is Binary Cross Entropy loss since a pixel can be either black or white in the dataset
+* latentDims=2 : we encode to 2 latent dimensions
+* method=ADAM : use the ADAM optimizer
+* batchSize=128 : use a minibatch size of 128
+* sampleSize=1 : in each training iteration, sample only once from the Encoder distribution
+* maxIterations=5000 : after 5000 iterations one should already see some valid results
+* trace=true : trace intermediate output to the command line
+* traceInterval=1 : log progress for each iteration
+* tag=vae : use a separate tag for storing/retrieving the weights
+
+Once trained, you can check whether it works by deploying an instance of your Decoder (make sure to reuse the same tag as you trained with, i.e. "vae"), and forward some random data through it. The Decoder should generate valid reconstructions from the MNIST dataset. You can also forward custom latent dimensions to inspect how the VAE mapped the data points into the latent space. 
+
+![vae](figures/vae.png)
+
 
 
 [[1]](https://arxiv.org/abs/1312.6114) Diederik P Kingma, Max Welling, Auto-Encoding Variational Bayes.
