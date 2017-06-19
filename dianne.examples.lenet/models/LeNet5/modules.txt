@@ -1,0 +1,186 @@
+{
+  "name": "LeNet5",
+  "modules": {
+    "861ac922-8183-d16c-6da6-cfc5a0b76b63": {
+      "id": "861ac922-8183-d16c-6da6-cfc5a0b76b63",
+      "type": "MaxPooling",
+      "next": [
+        "91d8c2f4-a400-c5c5-8c87-c1a9dc2b3c54"
+      ],
+      "prev": [
+        "60e1a5f0-5d8a-c4e7-07b2-b4b035c9599e"
+      ],
+      "depth": "",
+      "strideY": "2",
+      "strideZ": "",
+      "name": "MaxPooling",
+      "width": "2",
+      "strideX": "2",
+      "category": "Layer",
+      "height": "2"
+    },
+    "bb37748d-64a5-555d-6ed7-39bf3437c87c": {
+      "id": "bb37748d-64a5-555d-6ed7-39bf3437c87c",
+      "type": "MaxPooling",
+      "next": [
+        "680569f8-f3ae-dc6f-8768-2f4f8c4d2763"
+      ],
+      "prev": [
+        "b4abb968-c46c-230b-62e5-8dfb222c765e"
+      ],
+      "depth": "",
+      "strideY": "2",
+      "strideZ": "",
+      "name": "MaxPooling",
+      "width": "2",
+      "strideX": "2",
+      "category": "Layer",
+      "height": "2"
+    },
+    "0dbc1e0e-8bff-aad0-7803-70a696949458": {
+      "id": "0dbc1e0e-8bff-aad0-7803-70a696949458",
+      "type": "Convolution",
+      "next": [
+        "60e1a5f0-5d8a-c4e7-07b2-b4b035c9599e"
+      ],
+      "prev": [
+        "721d4f79-8dfb-a366-dcb0-5f4d59b2b6f1"
+      ],
+      "noInputPlanes": "1",
+      "strideX": "1",
+      "kernelWidth": "5",
+      "trainable": "true",
+      "kernelHeight": "5",
+      "padX": "2",
+      "noOutputPlanes": "32",
+      "padY": "2",
+      "padZ": "",
+      "strideY": "1",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    },
+    "680569f8-f3ae-dc6f-8768-2f4f8c4d2763": {
+      "id": "680569f8-f3ae-dc6f-8768-2f4f8c4d2763",
+      "type": "Linear",
+      "next": [
+        "00ec9929-3be4-c920-50d2-8081a5d21f9a"
+      ],
+      "prev": [
+        "bb37748d-64a5-555d-6ed7-39bf3437c87c"
+      ],
+      "output": "1024",
+      "input": "3136",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "721d4f79-8dfb-a366-dcb0-5f4d59b2b6f1": {
+      "id": "721d4f79-8dfb-a366-dcb0-5f4d59b2b6f1",
+      "type": "Input",
+      "next": [
+        "0dbc1e0e-8bff-aad0-7803-70a696949458"
+      ],
+      "name": "Input",
+      "category": "Input-Output"
+    },
+    "3c43f041-aa31-0a62-87a7-5191aadeb82e": {
+      "id": "3c43f041-aa31-0a62-87a7-5191aadeb82e",
+      "type": "Linear",
+      "next": [
+        "596e8dcf-1cd7-9c5f-dace-2f78ebad7c3e"
+      ],
+      "prev": [
+        "00ec9929-3be4-c920-50d2-8081a5d21f9a"
+      ],
+      "output": "10",
+      "input": "1024",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "91d8c2f4-a400-c5c5-8c87-c1a9dc2b3c54": {
+      "id": "91d8c2f4-a400-c5c5-8c87-c1a9dc2b3c54",
+      "type": "Convolution",
+      "next": [
+        "b4abb968-c46c-230b-62e5-8dfb222c765e"
+      ],
+      "prev": [
+        "861ac922-8183-d16c-6da6-cfc5a0b76b63"
+      ],
+      "noInputPlanes": "32",
+      "strideX": "1",
+      "kernelWidth": "5",
+      "trainable": "true",
+      "kernelHeight": "5",
+      "padX": "2",
+      "noOutputPlanes": "64",
+      "padY": "2",
+      "padZ": "",
+      "strideY": "1",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    },
+    "b4abb968-c46c-230b-62e5-8dfb222c765e": {
+      "id": "b4abb968-c46c-230b-62e5-8dfb222c765e",
+      "type": "ReLU",
+      "next": [
+        "bb37748d-64a5-555d-6ed7-39bf3437c87c"
+      ],
+      "prev": [
+        "91d8c2f4-a400-c5c5-8c87-c1a9dc2b3c54"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "60e1a5f0-5d8a-c4e7-07b2-b4b035c9599e": {
+      "id": "60e1a5f0-5d8a-c4e7-07b2-b4b035c9599e",
+      "type": "ReLU",
+      "next": [
+        "861ac922-8183-d16c-6da6-cfc5a0b76b63"
+      ],
+      "prev": [
+        "0dbc1e0e-8bff-aad0-7803-70a696949458"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "00ec9929-3be4-c920-50d2-8081a5d21f9a": {
+      "id": "00ec9929-3be4-c920-50d2-8081a5d21f9a",
+      "type": "ReLU",
+      "next": [
+        "3c43f041-aa31-0a62-87a7-5191aadeb82e"
+      ],
+      "prev": [
+        "680569f8-f3ae-dc6f-8768-2f4f8c4d2763"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "93d9c941-b49d-c787-64e5-b0f6f52e4903": {
+      "id": "93d9c941-b49d-c787-64e5-b0f6f52e4903",
+      "type": "Output",
+      "prev": [
+        "596e8dcf-1cd7-9c5f-dace-2f78ebad7c3e"
+      ],
+      "name": "Output",
+      "category": "Input-Output",
+      "labels": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+    },
+    "596e8dcf-1cd7-9c5f-dace-2f78ebad7c3e": {
+      "id": "596e8dcf-1cd7-9c5f-dace-2f78ebad7c3e",
+      "type": "LogSoftmax",
+      "next": [
+        "93d9c941-b49d-c787-64e5-b0f6f52e4903"
+      ],
+      "prev": [
+        "3c43f041-aa31-0a62-87a7-5191aadeb82e"
+      ],
+      "name": "LogSoftmax",
+      "category": "Activation"
+    }
+  }
+}

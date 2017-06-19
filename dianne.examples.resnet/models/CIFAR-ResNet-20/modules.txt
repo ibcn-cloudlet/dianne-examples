@@ -1,0 +1,461 @@
+{
+  "name": "CIFAR-ResNet-20",
+  "modules": {
+    "0e75f836-1db0-87c5-aab0-9956b2e81e3e": {
+      "id": "0e75f836-1db0-87c5-aab0-9956b2e81e3e",
+      "type": "Residual",
+      "next": [
+        "e32b4f14-4e30-9c07-40c1-3e24edd2bd8e"
+      ],
+      "prev": [
+        "19250105-0567-7495-6a38-2cd11f288f5e"
+      ],
+      "noOutputPlanes": "16",
+      "inputHeight": "32",
+      "name": "Residual",
+      "noInputPlanes": "16",
+      "category": "Composite",
+      "inputWidth": "32",
+      "trainable": "true"
+    },
+    "f05e7ffb-fdd8-9a84-10ff-3e6fcf221ac3": {
+      "id": "f05e7ffb-fdd8-9a84-10ff-3e6fcf221ac3",
+      "type": "Residual",
+      "next": [
+        "3681a9bc-c7d6-569a-b53b-41c4441576cb"
+      ],
+      "prev": [
+        "ba8633d3-7824-bc40-d399-710f7ba2a4ed"
+      ],
+      "noOutputPlanes": "32",
+      "inputHeight": "16",
+      "name": "Residual",
+      "noInputPlanes": "16",
+      "category": "Composite",
+      "inputWidth": "16",
+      "trainable": "true"
+    },
+    "f9100cbd-b5ce-7c2e-ef07-4f754264fe91": {
+      "id": "f9100cbd-b5ce-7c2e-ef07-4f754264fe91",
+      "type": "Residual",
+      "next": [
+        "0af2bb64-6183-d686-a395-cc7481e1e6a5"
+      ],
+      "prev": [
+        "a88ef739-12a3-9c57-c84a-52661747ac67"
+      ],
+      "noOutputPlanes": "32",
+      "inputHeight": "16",
+      "name": "Residual",
+      "noInputPlanes": "32",
+      "category": "Composite",
+      "inputWidth": "16",
+      "trainable": "true"
+    },
+    "12c298f4-e4a1-b94a-5e2e-71141c79cf52": {
+      "id": "12c298f4-e4a1-b94a-5e2e-71141c79cf52",
+      "type": "Convolution",
+      "next": [
+        "28b26700-f581-4694-4b5a-105c8d85c30b"
+      ],
+      "prev": [
+        "073f4072-94c7-1dab-522b-38ad927bff47"
+      ],
+      "noInputPlanes": "3",
+      "strideX": "1",
+      "kernelWidth": "3",
+      "trainable": "true",
+      "kernelHeight": "3",
+      "padX": "1",
+      "noOutputPlanes": "16",
+      "padY": "1",
+      "padZ": "",
+      "strideY": "1",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    },
+    "19250105-0567-7495-6a38-2cd11f288f5e": {
+      "id": "19250105-0567-7495-6a38-2cd11f288f5e",
+      "type": "ReLU",
+      "next": [
+        "0e75f836-1db0-87c5-aab0-9956b2e81e3e"
+      ],
+      "prev": [
+        "28b26700-f581-4694-4b5a-105c8d85c30b"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "a88ef739-12a3-9c57-c84a-52661747ac67": {
+      "id": "a88ef739-12a3-9c57-c84a-52661747ac67",
+      "type": "Residual",
+      "next": [
+        "f9100cbd-b5ce-7c2e-ef07-4f754264fe91"
+      ],
+      "prev": [
+        "69389d01-ba68-6881-d1d3-1e3b59f05099"
+      ],
+      "noOutputPlanes": "32",
+      "inputHeight": "16",
+      "name": "Residual",
+      "noInputPlanes": "32",
+      "category": "Composite",
+      "inputWidth": "16",
+      "trainable": "true"
+    },
+    "3681a9bc-c7d6-569a-b53b-41c4441576cb": {
+      "id": "3681a9bc-c7d6-569a-b53b-41c4441576cb",
+      "type": "Residual",
+      "next": [
+        "69389d01-ba68-6881-d1d3-1e3b59f05099"
+      ],
+      "prev": [
+        "f05e7ffb-fdd8-9a84-10ff-3e6fcf221ac3"
+      ],
+      "noOutputPlanes": "32",
+      "inputHeight": "16",
+      "name": "Residual",
+      "noInputPlanes": "32",
+      "category": "Composite",
+      "inputWidth": "16",
+      "trainable": "true"
+    },
+    "69389d01-ba68-6881-d1d3-1e3b59f05099": {
+      "id": "69389d01-ba68-6881-d1d3-1e3b59f05099",
+      "type": "Residual",
+      "next": [
+        "a88ef739-12a3-9c57-c84a-52661747ac67"
+      ],
+      "prev": [
+        "3681a9bc-c7d6-569a-b53b-41c4441576cb"
+      ],
+      "noOutputPlanes": "32",
+      "inputHeight": "16",
+      "name": "Residual",
+      "noInputPlanes": "32",
+      "category": "Composite",
+      "inputWidth": "16",
+      "trainable": "true"
+    },
+    "81847321-e636-ad34-f315-0f266c58759a": {
+      "id": "81847321-e636-ad34-f315-0f266c58759a",
+      "type": "AvgPooling",
+      "next": [
+        "fe4c0160-bb12-efe7-8e50-f59fc0858327"
+      ],
+      "prev": [
+        "2e3ef4e9-cee2-1a44-cc2a-8238de51b825"
+      ],
+      "depth": "",
+      "strideY": "8",
+      "strideZ": "",
+      "name": "AvgPooling",
+      "width": "8",
+      "strideX": "8",
+      "category": "Layer",
+      "height": "8"
+    },
+    "e15eed61-cc05-fd7c-9b47-661f10bd02b5": {
+      "id": "e15eed61-cc05-fd7c-9b47-661f10bd02b5",
+      "type": "Output",
+      "prev": [
+        "3e77bb77-b25e-34a9-31c8-cb7fc9dc2920"
+      ],
+      "name": "Output",
+      "category": "Input-Output",
+      "labels": "[airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck]"
+    },
+    "2e3ef4e9-cee2-1a44-cc2a-8238de51b825": {
+      "id": "2e3ef4e9-cee2-1a44-cc2a-8238de51b825",
+      "type": "Residual",
+      "next": [
+        "81847321-e636-ad34-f315-0f266c58759a"
+      ],
+      "prev": [
+        "c1850b70-7aac-d4ea-1277-e57603e9e134"
+      ],
+      "noOutputPlanes": "64",
+      "inputHeight": "8",
+      "name": "Residual",
+      "noInputPlanes": "64",
+      "category": "Composite",
+      "inputWidth": "8",
+      "trainable": "true"
+    },
+    "073f4072-94c7-1dab-522b-38ad927bff47": {
+      "id": "073f4072-94c7-1dab-522b-38ad927bff47",
+      "type": "Input",
+      "next": [
+        "12c298f4-e4a1-b94a-5e2e-71141c79cf52"
+      ],
+      "name": "Input",
+      "category": "Input-Output"
+    },
+    "a6670858-93cb-3488-d90b-aa5d7e64df6e": {
+      "id": "a6670858-93cb-3488-d90b-aa5d7e64df6e",
+      "type": "Residual",
+      "next": [
+        "7b96022b-4671-0432-9f7f-063b828bca88"
+      ],
+      "prev": [
+        "a37e875f-ba5f-24a1-e725-330e1d3598fe"
+      ],
+      "noOutputPlanes": "64",
+      "inputHeight": "8",
+      "name": "Residual",
+      "noInputPlanes": "64",
+      "category": "Composite",
+      "inputWidth": "8",
+      "trainable": "true"
+    },
+    "23445966-3725-e0c3-8795-3185f1f7a9c0": {
+      "id": "23445966-3725-e0c3-8795-3185f1f7a9c0",
+      "type": "MaxPooling",
+      "next": [
+        "ab53d006-98bf-24d1-19de-5a7b079fe73a"
+      ],
+      "prev": [
+        "0af2bb64-6183-d686-a395-cc7481e1e6a5"
+      ],
+      "depth": "",
+      "strideY": "2",
+      "strideZ": "",
+      "name": "MaxPooling",
+      "width": "2",
+      "strideX": "2",
+      "category": "Layer",
+      "height": "2"
+    },
+    "ba8633d3-7824-bc40-d399-710f7ba2a4ed": {
+      "id": "ba8633d3-7824-bc40-d399-710f7ba2a4ed",
+      "type": "MaxPooling",
+      "next": [
+        "f05e7ffb-fdd8-9a84-10ff-3e6fcf221ac3"
+      ],
+      "prev": [
+        "dc0cfadb-ceea-6f9e-8717-b652086399b0"
+      ],
+      "depth": "",
+      "strideY": "2",
+      "strideZ": "",
+      "name": "MaxPooling",
+      "width": "2",
+      "strideX": "2",
+      "category": "Layer",
+      "height": "2"
+    },
+    "28b26700-f581-4694-4b5a-105c8d85c30b": {
+      "id": "28b26700-f581-4694-4b5a-105c8d85c30b",
+      "type": "BatchNormalization",
+      "next": [
+        "19250105-0567-7495-6a38-2cd11f288f5e"
+      ],
+      "prev": [
+        "12c298f4-e4a1-b94a-5e2e-71141c79cf52"
+      ],
+      "size": "16",
+      "name": "BatchNormalization",
+      "category": "Regularization",
+      "trainable": "true"
+    },
+    "c1850b70-7aac-d4ea-1277-e57603e9e134": {
+      "id": "c1850b70-7aac-d4ea-1277-e57603e9e134",
+      "type": "Residual",
+      "next": [
+        "2e3ef4e9-cee2-1a44-cc2a-8238de51b825"
+      ],
+      "prev": [
+        "7b96022b-4671-0432-9f7f-063b828bca88"
+      ],
+      "noOutputPlanes": "64",
+      "inputHeight": "8",
+      "name": "Residual",
+      "noInputPlanes": "64",
+      "category": "Composite",
+      "inputWidth": "8",
+      "trainable": "true"
+    },
+    "167deed8-f055-6bbe-4a28-46947a63bca1": {
+      "id": "167deed8-f055-6bbe-4a28-46947a63bca1",
+      "type": "Residual",
+      "next": [
+        "dc0cfadb-ceea-6f9e-8717-b652086399b0"
+      ],
+      "prev": [
+        "e5961d0e-1a27-201c-dd38-d2f76e14f18e"
+      ],
+      "noOutputPlanes": "16",
+      "inputHeight": "32",
+      "name": "Residual",
+      "noInputPlanes": "16",
+      "category": "Composite",
+      "inputWidth": "32",
+      "trainable": "true"
+    },
+    "e32b4f14-4e30-9c07-40c1-3e24edd2bd8e": {
+      "id": "e32b4f14-4e30-9c07-40c1-3e24edd2bd8e",
+      "type": "Residual",
+      "next": [
+        "21388134-ad50-b1b0-f429-baf75d9de01d"
+      ],
+      "prev": [
+        "0e75f836-1db0-87c5-aab0-9956b2e81e3e"
+      ],
+      "noOutputPlanes": "16",
+      "inputHeight": "32",
+      "name": "Residual",
+      "noInputPlanes": "16",
+      "category": "Composite",
+      "inputWidth": "32",
+      "trainable": "true"
+    },
+    "21388134-ad50-b1b0-f429-baf75d9de01d": {
+      "id": "21388134-ad50-b1b0-f429-baf75d9de01d",
+      "type": "Residual",
+      "next": [
+        "e5961d0e-1a27-201c-dd38-d2f76e14f18e"
+      ],
+      "prev": [
+        "e32b4f14-4e30-9c07-40c1-3e24edd2bd8e"
+      ],
+      "noOutputPlanes": "16",
+      "inputHeight": "32",
+      "name": "Residual",
+      "noInputPlanes": "16",
+      "category": "Composite",
+      "inputWidth": "32",
+      "trainable": "true"
+    },
+    "fe4c0160-bb12-efe7-8e50-f59fc0858327": {
+      "id": "fe4c0160-bb12-efe7-8e50-f59fc0858327",
+      "type": "Linear",
+      "next": [
+        "3e77bb77-b25e-34a9-31c8-cb7fc9dc2920"
+      ],
+      "prev": [
+        "81847321-e636-ad34-f315-0f266c58759a"
+      ],
+      "output": "10",
+      "input": "64",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "dc0cfadb-ceea-6f9e-8717-b652086399b0": {
+      "id": "dc0cfadb-ceea-6f9e-8717-b652086399b0",
+      "type": "Residual",
+      "next": [
+        "ba8633d3-7824-bc40-d399-710f7ba2a4ed"
+      ],
+      "prev": [
+        "167deed8-f055-6bbe-4a28-46947a63bca1"
+      ],
+      "noOutputPlanes": "16",
+      "inputHeight": "32",
+      "name": "Residual",
+      "noInputPlanes": "16",
+      "category": "Composite",
+      "inputWidth": "32",
+      "trainable": "true"
+    },
+    "e5961d0e-1a27-201c-dd38-d2f76e14f18e": {
+      "id": "e5961d0e-1a27-201c-dd38-d2f76e14f18e",
+      "type": "Residual",
+      "next": [
+        "167deed8-f055-6bbe-4a28-46947a63bca1"
+      ],
+      "prev": [
+        "21388134-ad50-b1b0-f429-baf75d9de01d"
+      ],
+      "noOutputPlanes": "16",
+      "inputHeight": "32",
+      "name": "Residual",
+      "noInputPlanes": "16",
+      "category": "Composite",
+      "inputWidth": "32",
+      "trainable": "true"
+    },
+    "0af2bb64-6183-d686-a395-cc7481e1e6a5": {
+      "id": "0af2bb64-6183-d686-a395-cc7481e1e6a5",
+      "type": "Residual",
+      "next": [
+        "23445966-3725-e0c3-8795-3185f1f7a9c0"
+      ],
+      "prev": [
+        "f9100cbd-b5ce-7c2e-ef07-4f754264fe91"
+      ],
+      "noOutputPlanes": "32",
+      "inputHeight": "16",
+      "name": "Residual",
+      "noInputPlanes": "32",
+      "category": "Composite",
+      "inputWidth": "16",
+      "trainable": "true"
+    },
+    "7b96022b-4671-0432-9f7f-063b828bca88": {
+      "id": "7b96022b-4671-0432-9f7f-063b828bca88",
+      "type": "Residual",
+      "next": [
+        "c1850b70-7aac-d4ea-1277-e57603e9e134"
+      ],
+      "prev": [
+        "a6670858-93cb-3488-d90b-aa5d7e64df6e"
+      ],
+      "noOutputPlanes": "64",
+      "inputHeight": "8",
+      "name": "Residual",
+      "noInputPlanes": "64",
+      "category": "Composite",
+      "inputWidth": "8",
+      "trainable": "true"
+    },
+    "ab53d006-98bf-24d1-19de-5a7b079fe73a": {
+      "id": "ab53d006-98bf-24d1-19de-5a7b079fe73a",
+      "type": "Residual",
+      "next": [
+        "a37e875f-ba5f-24a1-e725-330e1d3598fe"
+      ],
+      "prev": [
+        "23445966-3725-e0c3-8795-3185f1f7a9c0"
+      ],
+      "noOutputPlanes": "64",
+      "inputHeight": "8",
+      "name": "Residual",
+      "noInputPlanes": "32",
+      "category": "Composite",
+      "inputWidth": "8",
+      "trainable": "true"
+    },
+    "3e77bb77-b25e-34a9-31c8-cb7fc9dc2920": {
+      "id": "3e77bb77-b25e-34a9-31c8-cb7fc9dc2920",
+      "type": "LogSoftmax",
+      "next": [
+        "e15eed61-cc05-fd7c-9b47-661f10bd02b5"
+      ],
+      "prev": [
+        "fe4c0160-bb12-efe7-8e50-f59fc0858327"
+      ],
+      "name": "LogSoftmax",
+      "category": "Activation"
+    },
+    "a37e875f-ba5f-24a1-e725-330e1d3598fe": {
+      "id": "a37e875f-ba5f-24a1-e725-330e1d3598fe",
+      "type": "Residual",
+      "next": [
+        "a6670858-93cb-3488-d90b-aa5d7e64df6e"
+      ],
+      "prev": [
+        "ab53d006-98bf-24d1-19de-5a7b079fe73a"
+      ],
+      "noOutputPlanes": "64",
+      "inputHeight": "8",
+      "name": "Residual",
+      "noInputPlanes": "64",
+      "category": "Composite",
+      "inputWidth": "8",
+      "trainable": "true"
+    }
+  }
+}
