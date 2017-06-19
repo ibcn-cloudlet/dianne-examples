@@ -31,6 +31,18 @@ In order to run Jep from your OSGi runtime on Linux, make sure you have the LD_P
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libpython2.7.so
 ```
 
+Note: the default box2d install might give problems on your system (i.e. `error 'module' object has no attribute ‘RAND_LIMIT_swigconstant’`). In this case, try to install box2d from source:
+
+```
+pip uninstall box2d-py Box2D
+git clone https://github.com/pybox2d/pybox2d
+
+cd pybox2d/
+python setup.py clean
+python setup.py build
+sudo python setup.py install 
+```
+
 ### Starting DIANNE runtime
 
 Start DIANNE using the `gym.bndrun` run file in this project. This file extends the default DIANNE run configuration, complemented with `rl.*` bundles as well as the gym environment bundle. You should get shell where you can interact with DIANNE using the command line:
