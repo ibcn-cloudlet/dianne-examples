@@ -4,6 +4,8 @@ Variational Autoencoders (VAEs) were defined in 2013 by Kingma et al [1]. They a
 
 The idea is that the data samples x are generated according to some generative process from latent variables z. The joint probability p(x,z) = p(x|z)p(z) decomposes into a prior p(z) of the latent variables and a likelihood p(x|z). Our goal is to find good values for the latent variables given the observed data, or to calculate the posterior p(z|x).
 
+![vae diagram](figures/vae-diagram.png)
+
 In a VAE we will approximate the true posterior p(z|x) by a probability q(z|x) represented by an encoder neural network that takes a data point x as input and outputs a distribution q(z|x). A decoder network will take a sample from the latent space as input and output an likelihood distribution p(x|z). To train both neural networks, we will minimize the following loss function:
 
 ![vae loss](https://latex.codecogs.com/gif.latex?L_i%28%5Ctheta%2C%5Cphi%29%20%3D%20-E_%7Bz%7Eq_%5Ctheta%28z%7Cx_i%29%7D%5B%5Clog%20p_%5Cphi%28x_i%7Cz%29%5D%20&plus;%20KL%28q_%5Ctheta%28z%7Cx_i%29%7C%7Cp%28z%29%29%29)
