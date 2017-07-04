@@ -1,0 +1,77 @@
+{
+  "name": "Discriminator",
+  "modules": {
+    "dfdf4377-75c3-0798-d9aa-c6c3ce3a02b2": {
+      "id": "dfdf4377-75c3-0798-d9aa-c6c3ce3a02b2",
+      "type": "Linear",
+      "next": [
+        "14fba953-dced-eab7-219f-4160aaad75f2"
+      ],
+      "prev": [
+        "95da3aad-9519-7378-d847-101af848ab59"
+      ],
+      "output": "512",
+      "input": "784",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "14fba953-dced-eab7-219f-4160aaad75f2": {
+      "id": "14fba953-dced-eab7-219f-4160aaad75f2",
+      "type": "ReLU",
+      "next": [
+        "132c934f-6698-7e59-7cd6-6095bf90ecd3"
+      ],
+      "prev": [
+        "dfdf4377-75c3-0798-d9aa-c6c3ce3a02b2"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "132c934f-6698-7e59-7cd6-6095bf90ecd3": {
+      "id": "132c934f-6698-7e59-7cd6-6095bf90ecd3",
+      "type": "Linear",
+      "next": [
+        "792d7800-4c27-764c-d078-a73f6896c552"
+      ],
+      "prev": [
+        "14fba953-dced-eab7-219f-4160aaad75f2"
+      ],
+      "output": "1",
+      "input": "512",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "792d7800-4c27-764c-d078-a73f6896c552": {
+      "id": "792d7800-4c27-764c-d078-a73f6896c552",
+      "type": "Sigmoid",
+      "next": [
+        "068df1b0-bad9-47df-4bc2-f0ab8471a844"
+      ],
+      "prev": [
+        "132c934f-6698-7e59-7cd6-6095bf90ecd3"
+      ],
+      "name": "Sigmoid",
+      "category": "Activation"
+    },
+    "068df1b0-bad9-47df-4bc2-f0ab8471a844": {
+      "id": "068df1b0-bad9-47df-4bc2-f0ab8471a844",
+      "type": "Output",
+      "prev": [
+        "792d7800-4c27-764c-d078-a73f6896c552"
+      ],
+      "name": "Output",
+      "category": "Input-Output"
+    },
+    "95da3aad-9519-7378-d847-101af848ab59": {
+      "id": "95da3aad-9519-7378-d847-101af848ab59",
+      "type": "Input",
+      "next": [
+        "dfdf4377-75c3-0798-d9aa-c6c3ce3a02b2"
+      ],
+      "name": "Input",
+      "category": "Input-Output"
+    }
+  }
+}

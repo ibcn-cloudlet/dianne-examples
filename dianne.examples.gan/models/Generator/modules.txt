@@ -1,0 +1,92 @@
+{
+  "name": "Generator",
+  "modules": {
+    "41982cd8-e43a-bea9-7c41-883e6c495397": {
+      "id": "41982cd8-e43a-bea9-7c41-883e6c495397",
+      "type": "Linear",
+      "next": [
+        "bf40cd99-c824-748b-3d3c-dfca328d5577"
+      ],
+      "prev": [
+        "7238ab6e-c2fe-567e-07ef-0371031211c9"
+      ],
+      "output": "784",
+      "input": "512",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "7238ab6e-c2fe-567e-07ef-0371031211c9": {
+      "id": "7238ab6e-c2fe-567e-07ef-0371031211c9",
+      "type": "ReLU",
+      "next": [
+        "41982cd8-e43a-bea9-7c41-883e6c495397"
+      ],
+      "prev": [
+        "94d48019-5b03-6256-af7b-cf13a9e893f6"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "7ca9b46f-5986-749a-126d-c5848ab53453": {
+      "id": "7ca9b46f-5986-749a-126d-c5848ab53453",
+      "type": "Input",
+      "next": [
+        "94d48019-5b03-6256-af7b-cf13a9e893f6"
+      ],
+      "name": "Input",
+      "category": "Input-Output"
+    },
+    "bd84574d-7eef-7eed-0bf4-7d38048fdad1": {
+      "id": "bd84574d-7eef-7eed-0bf4-7d38048fdad1",
+      "type": "Output",
+      "prev": [
+        "7f7dd94b-e755-6acc-ccb9-600a3c535126"
+      ],
+      "name": "Output",
+      "category": "Input-Output"
+    },
+    "7f7dd94b-e755-6acc-ccb9-600a3c535126": {
+      "id": "7f7dd94b-e755-6acc-ccb9-600a3c535126",
+      "type": "Reshape",
+      "next": [
+        "bd84574d-7eef-7eed-0bf4-7d38048fdad1"
+      ],
+      "prev": [
+        "bf40cd99-c824-748b-3d3c-dfca328d5577"
+      ],
+      "dim2": "28",
+      "dim1": "28",
+      "dim0": "1",
+      "name": "Reshape",
+      "category": "Layer"
+    },
+    "bf40cd99-c824-748b-3d3c-dfca328d5577": {
+      "id": "bf40cd99-c824-748b-3d3c-dfca328d5577",
+      "type": "Sigmoid",
+      "next": [
+        "7f7dd94b-e755-6acc-ccb9-600a3c535126"
+      ],
+      "prev": [
+        "41982cd8-e43a-bea9-7c41-883e6c495397"
+      ],
+      "name": "Sigmoid",
+      "category": "Activation"
+    },
+    "94d48019-5b03-6256-af7b-cf13a9e893f6": {
+      "id": "94d48019-5b03-6256-af7b-cf13a9e893f6",
+      "type": "Linear",
+      "next": [
+        "7238ab6e-c2fe-567e-07ef-0371031211c9"
+      ],
+      "prev": [
+        "7ca9b46f-5986-749a-126d-c5848ab53453"
+      ],
+      "output": "512",
+      "input": "10",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    }
+  }
+}
