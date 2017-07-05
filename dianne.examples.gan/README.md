@@ -136,4 +136,7 @@ And ultimately you can start seeing actual handwritten digits:
 
 Try it out with a larger Generator and Discriminator network for generating more realistic samples and apply it on more complex datasets. 
 
+
+## References
+
 [[1]](https://arxiv.org/abs/1406.2661) Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, Generative Adversarial Networks

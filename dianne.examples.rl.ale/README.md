@@ -73,4 +73,6 @@ The agent should also start doing more sensible actions:
 ![Breakout gameplay after some training](figures/playing.gif)
 
 
+## References
+
 [[1]](https://arxiv.org/abs/1312.5602) Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, Martin A. Riedmiller, Playing Atari with Deep Reinforcement Learning.

@@ -49,6 +49,8 @@ In the end you should be able to test your neural network in the "Run" tab of th
 
 ![cifar](figures/cifar.png)
 
+## References
+
 [[1]](https://www.cs.toronto.edu/~kriz/cifar.html) CIFAR datasets.
 
 [[2]](https://arxiv.org/abs/1512.03385) Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun, Deep Residual Learning for Image Recognition.

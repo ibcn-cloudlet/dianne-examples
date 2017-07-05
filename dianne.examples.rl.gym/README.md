@@ -178,6 +178,8 @@ act DeepLunar Gym LunarPool env=LunarLander-v2 maxActions=500 strategy=GreedyAct
 ![Trained LunarLander](figures/trained.gif)
 
 
+## References
+
 [[1]](https://arxiv.org/abs/1606.01540) Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman, Jie Tang, Wojciech Zaremba, OpenAI Gym.
 
 [[2]](https://arxiv.org/abs/1312.5602) Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, Martin A. Riedmiller, Playing Atari with Deep Reinforcement Learning.

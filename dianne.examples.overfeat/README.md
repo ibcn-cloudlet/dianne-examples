@@ -25,6 +25,7 @@ Deploy the network, and feed images to it in the run tab to see the classificati
 ![cat](figures/cat.png)
 
 
+## References
 
 [[1]](http://www.image-net.org/) ImageNet.
 

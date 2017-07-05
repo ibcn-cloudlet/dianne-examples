@@ -75,6 +75,7 @@ Finally, we can deploy our network and generate sequences. In the run tab, there
 The resulting text has the structure of a shakespeare play and looks like old English.
 
 
+## References
 
 [[1]](https://arxiv.org/abs/1308.0850) Alex Graves, Generating Sequences With Recurrent Neural Networks
 

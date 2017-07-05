@@ -57,5 +57,6 @@ Once trained, you can check whether it works by deploying an instance of your De
 ![vae](figures/vae.png)
 
 
+## References
 
 [[1]](https://arxiv.org/abs/1312.6114) Diederik P Kingma, Max Welling, Auto-Encoding Variational Bayes.
