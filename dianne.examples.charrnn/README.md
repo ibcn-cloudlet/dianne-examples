@@ -42,7 +42,7 @@ To support recurrent neural networks in DIANNE, we have the `Memory` module, whi
 
 In practice one often uses memory cells like LSTM [3] or GRUs [4], that are more suited to capture long term dependencies in the data. A good introduction on recurrent neural networks and LSTM cells can be found [here](http://colah.github.io/posts/2015-08-Understanding-LSTMs/). In DIANNE, both LSTM and GRU modules are supported out of the box. Actually, one could create an LSTM module out of the basic DIANNE building blocks and the `Memory` module:
 
-![LSTM](figures/LSTM.png)
+![LSTM](figures/lstm.png)
 
 To train a recurrent neural network, an often used method is back propagation through time where the neural network is unfolded over several sequence steps and is trained as a regular feed forward network. In DIANNE, this behavior is provided through the `BPTTLearningStrategy`.
 
