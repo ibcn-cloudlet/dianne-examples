@@ -3,6 +3,8 @@ DIANNE examples
 
 This repository contains some example use case of what you can do with DIANNE.
 
+In order to understand and run these examples, it is useful to first go through the [DIANNE getting started tutorial](http://dianne.intec.ugent.be/#gettingstarted).
+
 Image Classification
 --------------------
 
@@ -23,6 +25,7 @@ These examples illustrate various generative modelling techniques.
 
   * [Variational Autoencoder](dianne.examples.vae/README.md)
   * [Generative Adverserial Networks](dianne.examples.gan/README.md)
+  * [Text generation with LSTMs](dianne.examples.charrnn/README.md)
 
 Reinforcement learning
 ----------------------
