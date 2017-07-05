@@ -2,7 +2,7 @@
 
 The Generative Adverserial framework provides a way to approximate a dataset distribution by playing a min-max game between a Generator and a Discriminator. The Generator generates new fake samples which are fed into the Discriminator. The goal of the Discriminator is to classify the difference between real and generated samples, while the Generator tries to fool the Discriminator. By training both networks at the same time, the Generator will ultimately generate samples according to the true dataset distribution, in order to make the Discriminator unable to distinguish real from fake samples.
 
-~![GAN diagram](figures/gan-diagram.png)
+![GAN diagram](figures/gan-diagram.png)
 
 ## Implementing GAN in DIANNE
 
@@ -124,16 +124,16 @@ learn Generator,Discriminator MNIST strategy=GANLearningStrategy generatorDim=10
 
 During training, you can recover the Generator neural network in the DIANNE builder and visualize the outputs of the neural network. At first this is very noisy:
 
-[GAN 1](figures/gan1.png) 
+![GAN 1](figures/gan1.png) 
  
 After a while, you can see the Generator starts to generate white background and a blob of potential handwritten digits:
 
-[GAN 2](figures/gan2.png)
+![GAN 2](figures/gan2.png)
 
 And ultimately you can start seeing actual handwritten digits:
 
-[GAN 3](figures/gan3.png)
+![GAN 3](figures/gan3.png)
 
 Try it out with a larger Generator and Discriminator network for generating more realistic samples and apply it on more complex datasets. 
 
-[1](https://arxiv.org/abs/1406.2661) Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, Generative Adversarial Networks
+[[1]](https://arxiv.org/abs/1406.2661) Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, Generative Adversarial Networks

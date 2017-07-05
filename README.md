@@ -5,8 +5,10 @@ This repository contains some example use case of what you can do with DIANNE.
 
 Image Classification
 --------------------
+
 ![overfeat example](dianne.examples.overfeat/figures/cat.png)
-Image classification in DIANNE.
+
+Examples on image classification in DIANNE.
 
   * [Handwritten digit classification](dianne.examples.lenet/README.md)
   * [Residual Neural Networks](dianne.examples.resnet/README.md)
@@ -14,7 +16,9 @@ Image classification in DIANNE.
 
 Generative modelling
 ---------------------
+
 ![VAE example](dianne.examples.vae/figures/vae.png)
+
 These examples illustrate various generative modelling techniques.
 
   * [Variational Autoencoder](dianne.examples.vae/README.md)
@@ -22,8 +26,10 @@ These examples illustrate various generative modelling techniques.
 
 Reinforcement learning
 ----------------------
+
 ![Deep RL example](dianne.examples.rl.gym/figures/trained.gif)
-These examples show how to train deep reinforcement learning models in DIANNE.
+
+Examples on how to train deep reinforcement learning models in DIANNE.
 
   * [Deep Reinforcement Learning on OpenAI Gym](dianne.examples.rl.gym/README.md)
   * [Deep Q Learning on Arcade Learning Environment](dianne.examples.rl.ale/README.md)
