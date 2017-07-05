@@ -12,10 +12,11 @@ ImageNet [1] provides a large dataset of images that are labeled according to th
 
 ## Overfeat
 
-Overfeat [2] is a well known convolutional neural network trained on the ImageNet dataset. In this example we provide a DIANNE instance of both the Overfeat fast variant:
+Overfeat [2] is a well known convolutional neural network trained on the ImageNet dataset. In this example we provide DIANNE instances of both the fast and accurate Overfeat neural network:
 
 ![overfeat](figures/overfeat_fast.png)
 
+Caveat: we cannot store the weights on github. You can download the weights from the DIANNE website for the (fast)[http://dianne.intec.ugent.be/models/overfeat_fast/] and (accurate)[http://dianne.intec.ugent.be/models/overfeat_accurate/] variants. Download all binary files and put them in the models/weights folder.
  
 ## Feeding images to Overfeat
 
