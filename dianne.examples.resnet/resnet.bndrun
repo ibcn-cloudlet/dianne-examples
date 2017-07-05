@@ -1,7 +1,1 @@
-
-
-
 -include: ../cnf/all.bndrun
-
--runproperties.vae:\
-	be.iminds.iot.dianne.runtime.name="RESNET"

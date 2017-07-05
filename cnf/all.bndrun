@@ -23,6 +23,6 @@
 	be.iminds.iot.dianne.rnn.learn;version=${dianne.version}
 
 -runproperties.all:\
-	be.iminds.iot.dianne.runtime.name="Dashboard",\
+	be.iminds.iot.dianne.runtime.name="localhost",\
 	be.iminds.iot.dianne.storage="models",\
 	be.iminds.iot.dianne.datasets.location="../datasets"
