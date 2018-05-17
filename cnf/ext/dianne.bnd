@@ -12,6 +12,6 @@
 
 
 -plugin.dianne.repo= \
-	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+	aQute.bnd.repository.osgi.OSGiRepository; \
 		name=Dianne; \
-		locations=http://aiolos.intec.ugent.be/repositories/be.iminds.iot.dianne/index.xml;
+		locations=http://aiolos.intec.ugent.be/repositories/be.iminds.iot.dianne/index.xml

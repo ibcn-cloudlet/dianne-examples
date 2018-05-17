@@ -14,7 +14,7 @@
 
 
 -plugin.aiolos.repo= \
-	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+	aQute.bnd.repository.osgi.OSGiRepository; \
 		name=AIOLOS; \
-		locations=http://aiolos.intec.ugent.be/repositories/be.iminds.aiolos/index.xml;
+		locations=http://aiolos.intec.ugent.be/repositories/be.iminds.aiolos/index.xml
 

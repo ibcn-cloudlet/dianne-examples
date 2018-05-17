@@ -6,7 +6,7 @@
 #
 
 -plugin.launch.repo= \
-	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+	aQute.bnd.repository.osgi.OSGiRepository; \
 		name=Launch; \
-		locations=http://aiolos.intec.ugent.be/repositories/launch/index.xml;
+		locations=http://aiolos.intec.ugent.be/repositories/launch/index.xml
 

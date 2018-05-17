@@ -5,9 +5,9 @@
 #
 
 -plugin.concierge.repo= \
-	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+	aQute.bnd.repository.osgi.OSGiRepository; \
 		name=Concierge; \
-		locations=http://aiolos.intec.ugent.be/repositories/org.eclipse.concierge/index.xml;
+		locations=http://aiolos.intec.ugent.be/repositories/org.eclipse.concierge/index.xml
 	
 #TODO these packages are not required all the time ... generated -runsystempackages based on EE?	
 -runsystempackages.concierge: \
