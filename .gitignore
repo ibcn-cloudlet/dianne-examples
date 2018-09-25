@@ -6,4 +6,5 @@ RemoteSystemsTempFiles/
 .DS_Store
 .recommenders
 datasets/
-/jobs/
+jobs/
+**/weights/
