@@ -8,3 +8,7 @@ RemoteSystemsTempFiles/
 datasets/
 jobs/
 **/weights/
+.bnd
+.cache
+.ros
+data/
