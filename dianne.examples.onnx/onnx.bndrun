@@ -1,0 +1,7 @@
+-include: ../cnf/all.bndrun
+
+-runbundles.onnx: \
+	com.google.protobuf;version='[2.6.1,2.7)',\
+	ai.onnx;version='[1.0.1,2.0)',\
+	be.iminds.iot.dianne.onnx;version=${dianne.version},\
+	dianne.examples.onnx;version=latest
