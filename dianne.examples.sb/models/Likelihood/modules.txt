@@ -1,0 +1,309 @@
+{
+  "name": "Likelihood",
+  "modules": {
+    "c3ec44dc-ae46-c852-3245-6c2e275fbd70": {
+      "id": "c3ec44dc-ae46-c852-3245-6c2e275fbd70",
+      "type": "Duplicate",
+      "next": [
+        "df6985ee-cab1-5cd9-d21b-7b0e20c9eb8e",
+        "44723daf-888d-bb32-8aa0-1b8ae46b424a"
+      ],
+      "prev": [
+        "141e0e2a-5f04-e51e-80b8-e2a3549767a8"
+      ],
+      "name": "Duplicate",
+      "category": "Fork"
+    },
+    "055c2414-65b1-ee5d-e1de-cafde1ba78bf": {
+      "id": "055c2414-65b1-ee5d-e1de-cafde1ba78bf",
+      "type": "Linear",
+      "next": [
+        "3655d0dc-91f9-c49d-8fae-6d17a356ec66"
+      ],
+      "prev": [
+        "ca537ce0-8a63-a18b-5048-151f45712d02"
+      ],
+      "output": "256",
+      "input": "16",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "6a5e6e1f-8091-d324-d9be-a46d4aebbc28": {
+      "id": "6a5e6e1f-8091-d324-d9be-a46d4aebbc28",
+      "type": "Linear",
+      "next": [
+        "540df45f-2adb-f6b6-9a60-d76dcc8d4cc5"
+      ],
+      "prev": [
+        "9c54946d-fe31-06d0-67d4-23c2265cee6b"
+      ],
+      "output": "256",
+      "input": "256",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "3655d0dc-91f9-c49d-8fae-6d17a356ec66": {
+      "id": "3655d0dc-91f9-c49d-8fae-6d17a356ec66",
+      "type": "ReLU",
+      "next": [
+        "e241a9aa-0b4e-8a96-831e-06900ec1d4a9"
+      ],
+      "prev": [
+        "055c2414-65b1-ee5d-e1de-cafde1ba78bf"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "44723daf-888d-bb32-8aa0-1b8ae46b424a": {
+      "id": "44723daf-888d-bb32-8aa0-1b8ae46b424a",
+      "type": "Concat",
+      "next": [
+        "a8d791b0-f6df-08f0-7e2f-6d65715b1a2b"
+      ],
+      "prev": [
+        "df6985ee-cab1-5cd9-d21b-7b0e20c9eb8e",
+        "c3ec44dc-ae46-c852-3245-6c2e275fbd70"
+      ],
+      "name": "Concat",
+      "waitForAll": "",
+      "dim": "0",
+      "category": "Join"
+    },
+    "141e0e2a-5f04-e51e-80b8-e2a3549767a8": {
+      "id": "141e0e2a-5f04-e51e-80b8-e2a3549767a8",
+      "type": "Reshape",
+      "next": [
+        "c3ec44dc-ae46-c852-3245-6c2e275fbd70"
+      ],
+      "prev": [
+        "cd042192-801d-3f13-558e-e0c54864d2e9"
+      ],
+      "dim2": "",
+      "dim1": "",
+      "dim0": "128",
+      "name": "Reshape",
+      "category": "Layer"
+    },
+    "db65619b-d68e-f5f0-92f8-a0fb7242cc8e": {
+      "id": "db65619b-d68e-f5f0-92f8-a0fb7242cc8e",
+      "type": "Input",
+      "next": [
+        "51121247-69dd-042a-9c27-1f06829b32e5"
+      ],
+      "name": "Input",
+      "category": "Input-Output"
+    },
+    "6dbda012-ad0d-eb02-8743-3d2e87e13d5d": {
+      "id": "6dbda012-ad0d-eb02-8743-3d2e87e13d5d",
+      "type": "Multivariate Gaussian",
+      "next": [
+        "ca537ce0-8a63-a18b-5048-151f45712d02"
+      ],
+      "prev": [
+        "d1b46573-ad43-d1d2-4943-4ee0402bdb44"
+      ],
+      "stdevActivation": "Softplus",
+      "size": "16",
+      "name": "Multivariate Gaussian",
+      "meanActivation": "",
+      "category": "Variational"
+    },
+    "a8d791b0-f6df-08f0-7e2f-6d65715b1a2b": {
+      "id": "a8d791b0-f6df-08f0-7e2f-6d65715b1a2b",
+      "type": "Output",
+      "prev": [
+        "44723daf-888d-bb32-8aa0-1b8ae46b424a"
+      ],
+      "name": "Output",
+      "category": "Input-Output"
+    },
+    "e241a9aa-0b4e-8a96-831e-06900ec1d4a9": {
+      "id": "e241a9aa-0b4e-8a96-831e-06900ec1d4a9",
+      "type": "Linear",
+      "next": [
+        "d974f613-fd3f-651a-bdc3-84ce89f8256c"
+      ],
+      "prev": [
+        "3655d0dc-91f9-c49d-8fae-6d17a356ec66"
+      ],
+      "output": "464",
+      "input": "256",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "2c225c9d-f2ae-fdda-0a76-e78395501afb": {
+      "id": "2c225c9d-f2ae-fdda-0a76-e78395501afb",
+      "type": "FullConvolution",
+      "next": [
+        "af6b8532-827c-8625-20a5-1f45e19d0368"
+      ],
+      "prev": [
+        "40471052-e452-9695-4ee2-85132c103784"
+      ],
+      "noInputPlanes": "16",
+      "strideX": "2",
+      "kernelWidth": "6",
+      "trainable": "true",
+      "kernelHeight": "1",
+      "padX": "0",
+      "noOutputPlanes": "8",
+      "padY": "0",
+      "padZ": "",
+      "strideY": "2",
+      "strideZ": "",
+      "name": "FullConvolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    },
+    "af6b8532-827c-8625-20a5-1f45e19d0368": {
+      "id": "af6b8532-827c-8625-20a5-1f45e19d0368",
+      "type": "ReLU",
+      "next": [
+        "cd042192-801d-3f13-558e-e0c54864d2e9"
+      ],
+      "prev": [
+        "2c225c9d-f2ae-fdda-0a76-e78395501afb"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "40471052-e452-9695-4ee2-85132c103784": {
+      "id": "40471052-e452-9695-4ee2-85132c103784",
+      "type": "Reshape",
+      "next": [
+        "2c225c9d-f2ae-fdda-0a76-e78395501afb"
+      ],
+      "prev": [
+        "d974f613-fd3f-651a-bdc3-84ce89f8256c"
+      ],
+      "dim2": "29",
+      "dim1": "1",
+      "dim0": "16",
+      "name": "Reshape",
+      "category": "Layer"
+    },
+    "9c54946d-fe31-06d0-67d4-23c2265cee6b": {
+      "id": "9c54946d-fe31-06d0-67d4-23c2265cee6b",
+      "type": "ReLU",
+      "next": [
+        "6a5e6e1f-8091-d324-d9be-a46d4aebbc28"
+      ],
+      "prev": [
+        "51121247-69dd-042a-9c27-1f06829b32e5"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "d1b46573-ad43-d1d2-4943-4ee0402bdb44": {
+      "id": "d1b46573-ad43-d1d2-4943-4ee0402bdb44",
+      "type": "Linear",
+      "next": [
+        "6dbda012-ad0d-eb02-8743-3d2e87e13d5d"
+      ],
+      "prev": [
+        "540df45f-2adb-f6b6-9a60-d76dcc8d4cc5"
+      ],
+      "output": "32",
+      "input": "256",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "540df45f-2adb-f6b6-9a60-d76dcc8d4cc5": {
+      "id": "540df45f-2adb-f6b6-9a60-d76dcc8d4cc5",
+      "type": "ReLU",
+      "next": [
+        "d1b46573-ad43-d1d2-4943-4ee0402bdb44"
+      ],
+      "prev": [
+        "6a5e6e1f-8091-d324-d9be-a46d4aebbc28"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "d974f613-fd3f-651a-bdc3-84ce89f8256c": {
+      "id": "d974f613-fd3f-651a-bdc3-84ce89f8256c",
+      "type": "ReLU",
+      "next": [
+        "40471052-e452-9695-4ee2-85132c103784"
+      ],
+      "prev": [
+        "e241a9aa-0b4e-8a96-831e-06900ec1d4a9"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "51121247-69dd-042a-9c27-1f06829b32e5": {
+      "id": "51121247-69dd-042a-9c27-1f06829b32e5",
+      "type": "Linear",
+      "next": [
+        "9c54946d-fe31-06d0-67d4-23c2265cee6b"
+      ],
+      "prev": [
+        "db65619b-d68e-f5f0-92f8-a0fb7242cc8e"
+      ],
+      "output": "256",
+      "input": "20",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "df6985ee-cab1-5cd9-d21b-7b0e20c9eb8e": {
+      "id": "df6985ee-cab1-5cd9-d21b-7b0e20c9eb8e",
+      "type": "SoftPlus",
+      "next": [
+        "44723daf-888d-bb32-8aa0-1b8ae46b424a"
+      ],
+      "prev": [
+        "c3ec44dc-ae46-c852-3245-6c2e275fbd70"
+      ],
+      "name": "SoftPlus",
+      "category": "Activation"
+    },
+    "cd042192-801d-3f13-558e-e0c54864d2e9": {
+      "id": "cd042192-801d-3f13-558e-e0c54864d2e9",
+      "type": "FullConvolution",
+      "next": [
+        "141e0e2a-5f04-e51e-80b8-e2a3549767a8"
+      ],
+      "prev": [
+        "af6b8532-827c-8625-20a5-1f45e19d0368"
+      ],
+      "noInputPlanes": "8",
+      "strideX": "2",
+      "kernelWidth": "6",
+      "trainable": "true",
+      "kernelHeight": "1",
+      "padX": "0",
+      "noOutputPlanes": "1",
+      "padY": "0",
+      "padZ": "",
+      "strideY": "1",
+      "strideZ": "",
+      "name": "FullConvolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    },
+    "ca537ce0-8a63-a18b-5048-151f45712d02": {
+      "id": "ca537ce0-8a63-a18b-5048-151f45712d02",
+      "type": "Narrow",
+      "next": [
+        "055c2414-65b1-ee5d-e1de-cafde1ba78bf"
+      ],
+      "prev": [
+        "6dbda012-ad0d-eb02-8743-3d2e87e13d5d"
+      ],
+      "index1": "",
+      "size1": "",
+      "index0": "0",
+      "size2": "",
+      "name": "Narrow",
+      "size0": "16",
+      "index2": "",
+      "category": "Layer"
+    }
+  }
+}

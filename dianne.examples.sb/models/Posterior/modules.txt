@@ -1,0 +1,244 @@
+{
+  "name": "Posterior",
+  "properties": {},
+  "modules": {
+    "9c267272-d79c-7fff-4557-04246f612a05": {
+      "id": "9c267272-d79c-7fff-4557-04246f612a05",
+      "type": "Input",
+      "next": [
+        "9881ebfd-a7d4-f681-6604-e4b175d39273"
+      ],
+      "name": "State",
+      "category": "Input-Output"
+    },
+    "9af34b94-72b3-4740-3123-3b4c9f1ed344": {
+      "id": "9af34b94-72b3-4740-3123-3b4c9f1ed344",
+      "type": "Linear",
+      "next": [
+        "2f310ad6-26a2-cc89-c008-57c4b48f95b6"
+      ],
+      "prev": [
+        "9881ebfd-a7d4-f681-6604-e4b175d39273"
+      ],
+      "output": "256",
+      "input": "491",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "b7a3a871-0a16-da65-339f-6445341f7bec": {
+      "id": "b7a3a871-0a16-da65-339f-6445341f7bec",
+      "type": "ReLU",
+      "next": [
+        "49063c37-4dd1-4ad5-ce79-dfa394ad3229"
+      ],
+      "prev": [
+        "fb5eb609-e0f9-1469-44c6-a6b70de49b4c"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "a7e216ad-ca7e-7340-d267-69e6f0cc8474": {
+      "id": "a7e216ad-ca7e-7340-d267-69e6f0cc8474",
+      "type": "ReLU",
+      "next": [
+        "77a6ec91-ef0b-9adf-596b-823fdc43a526"
+      ],
+      "prev": [
+        "0253987c-28f6-7f84-ef7d-f18e1af81d1d"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "c3868969-b8cf-53eb-3ed2-5864fa9d9f0a": {
+      "id": "c3868969-b8cf-53eb-3ed2-5864fa9d9f0a",
+      "type": "Input",
+      "next": [
+        "9881ebfd-a7d4-f681-6604-e4b175d39273"
+      ],
+      "name": "Action",
+      "category": "Input-Output"
+    },
+    "49063c37-4dd1-4ad5-ce79-dfa394ad3229": {
+      "id": "49063c37-4dd1-4ad5-ce79-dfa394ad3229",
+      "type": "Convolution",
+      "next": [
+        "0c40164b-6b21-6229-01e5-0cb53655ceb7"
+      ],
+      "prev": [
+        "b7a3a871-0a16-da65-339f-6445341f7bec"
+      ],
+      "noInputPlanes": "8",
+      "strideX": "2",
+      "kernelWidth": "6",
+      "trainable": "true",
+      "kernelHeight": "1",
+      "padX": "0",
+      "noOutputPlanes": "16",
+      "padY": "0",
+      "padZ": "",
+      "strideY": "1",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    },
+    "662c72da-5e0d-f288-9eb4-ca3d41acc7fd": {
+      "id": "662c72da-5e0d-f288-9eb4-ca3d41acc7fd",
+      "type": "Reshape",
+      "next": [
+        "9881ebfd-a7d4-f681-6604-e4b175d39273"
+      ],
+      "prev": [
+        "0c40164b-6b21-6229-01e5-0cb53655ceb7"
+      ],
+      "dim2": "",
+      "dim1": "",
+      "dim0": "464",
+      "name": "Reshape",
+      "category": "Layer"
+    },
+    "0253987c-28f6-7f84-ef7d-f18e1af81d1d": {
+      "id": "0253987c-28f6-7f84-ef7d-f18e1af81d1d",
+      "type": "Linear",
+      "next": [
+        "a7e216ad-ca7e-7340-d267-69e6f0cc8474"
+      ],
+      "prev": [
+        "2f310ad6-26a2-cc89-c008-57c4b48f95b6"
+      ],
+      "output": "256",
+      "input": "256",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "0c40164b-6b21-6229-01e5-0cb53655ceb7": {
+      "id": "0c40164b-6b21-6229-01e5-0cb53655ceb7",
+      "type": "ReLU",
+      "next": [
+        "662c72da-5e0d-f288-9eb4-ca3d41acc7fd"
+      ],
+      "prev": [
+        "49063c37-4dd1-4ad5-ce79-dfa394ad3229"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "77a6ec91-ef0b-9adf-596b-823fdc43a526": {
+      "id": "77a6ec91-ef0b-9adf-596b-823fdc43a526",
+      "type": "Linear",
+      "next": [
+        "5b6ca6ec-04b6-bf2c-73bf-88755da8966b"
+      ],
+      "prev": [
+        "a7e216ad-ca7e-7340-d267-69e6f0cc8474"
+      ],
+      "output": "40",
+      "input": "256",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "5b6ca6ec-04b6-bf2c-73bf-88755da8966b": {
+      "id": "5b6ca6ec-04b6-bf2c-73bf-88755da8966b",
+      "type": "Multivariate Gaussian",
+      "next": [
+        "b222f927-48ea-b8b7-9e89-afcfaba1c561"
+      ],
+      "prev": [
+        "77a6ec91-ef0b-9adf-596b-823fdc43a526"
+      ],
+      "stdevActivation": "Softplus",
+      "size": "20",
+      "name": "Multivariate Gaussian",
+      "meanActivation": "",
+      "category": "Variational"
+    },
+    "983149aa-b60d-538c-b2a2-8516a3524d48": {
+      "id": "983149aa-b60d-538c-b2a2-8516a3524d48",
+      "type": "Input",
+      "next": [
+        "23362ef8-f53f-815b-72ea-78b9f8e3510e"
+      ],
+      "name": "Observation",
+      "category": "Input-Output"
+    },
+    "23362ef8-f53f-815b-72ea-78b9f8e3510e": {
+      "id": "23362ef8-f53f-815b-72ea-78b9f8e3510e",
+      "type": "Reshape",
+      "next": [
+        "fb5eb609-e0f9-1469-44c6-a6b70de49b4c"
+      ],
+      "prev": [
+        "983149aa-b60d-538c-b2a2-8516a3524d48"
+      ],
+      "dim2": "128",
+      "dim1": "1",
+      "dim0": "1",
+      "name": "Reshape",
+      "category": "Layer"
+    },
+    "2f310ad6-26a2-cc89-c008-57c4b48f95b6": {
+      "id": "2f310ad6-26a2-cc89-c008-57c4b48f95b6",
+      "type": "ReLU",
+      "next": [
+        "0253987c-28f6-7f84-ef7d-f18e1af81d1d"
+      ],
+      "prev": [
+        "9af34b94-72b3-4740-3123-3b4c9f1ed344"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "9881ebfd-a7d4-f681-6604-e4b175d39273": {
+      "id": "9881ebfd-a7d4-f681-6604-e4b175d39273",
+      "type": "Concat",
+      "next": [
+        "9af34b94-72b3-4740-3123-3b4c9f1ed344"
+      ],
+      "prev": [
+        "662c72da-5e0d-f288-9eb4-ca3d41acc7fd",
+        "9c267272-d79c-7fff-4557-04246f612a05",
+        "c3868969-b8cf-53eb-3ed2-5864fa9d9f0a"
+      ],
+      "name": "Concat",
+      "waitForAll": "",
+      "dim": "0",
+      "category": "Join"
+    },
+    "b222f927-48ea-b8b7-9e89-afcfaba1c561": {
+      "id": "b222f927-48ea-b8b7-9e89-afcfaba1c561",
+      "type": "Output",
+      "prev": [
+        "5b6ca6ec-04b6-bf2c-73bf-88755da8966b"
+      ],
+      "name": "Output",
+      "category": "Input-Output"
+    },
+    "fb5eb609-e0f9-1469-44c6-a6b70de49b4c": {
+      "id": "fb5eb609-e0f9-1469-44c6-a6b70de49b4c",
+      "type": "Convolution",
+      "next": [
+        "b7a3a871-0a16-da65-339f-6445341f7bec"
+      ],
+      "prev": [
+        "23362ef8-f53f-815b-72ea-78b9f8e3510e"
+      ],
+      "noInputPlanes": "1",
+      "strideX": "2",
+      "kernelWidth": "6",
+      "trainable": "true",
+      "kernelHeight": "1",
+      "padX": "0",
+      "noOutputPlanes": "8",
+      "padY": "0",
+      "padZ": "",
+      "strideY": "1",
+      "strideZ": "",
+      "name": "Convolution",
+      "category": "Layer",
+      "kernelDepth": ""
+    }
+  }
+}

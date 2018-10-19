@@ -1,0 +1,132 @@
+{
+  "name": "Prior",
+  "properties": {},
+  "modules": {
+    "f573a6cf-96f0-f9c8-ab7e-a23128fbae20": {
+      "id": "f573a6cf-96f0-f9c8-ab7e-a23128fbae20",
+      "type": "Output",
+      "prev": [
+        "137acfd4-fde5-7948-c6d4-da520c84e075"
+      ],
+      "name": "Output",
+      "category": "Input-Output"
+    },
+    "07a7c714-34ee-800f-cd07-f74607370167": {
+      "id": "07a7c714-34ee-800f-cd07-f74607370167",
+      "type": "Input",
+      "next": [
+        "1da4714e-6e06-4531-d72c-f2f3fc530115"
+      ],
+      "name": "State",
+      "category": "Input-Output"
+    },
+    "bb402e08-9de8-0e65-7dba-c62590758c9b": {
+      "id": "bb402e08-9de8-0e65-7dba-c62590758c9b",
+      "type": "Input",
+      "next": [
+        "1da4714e-6e06-4531-d72c-f2f3fc530115"
+      ],
+      "name": "Action",
+      "category": "Input-Output"
+    },
+    "1da4714e-6e06-4531-d72c-f2f3fc530115": {
+      "id": "1da4714e-6e06-4531-d72c-f2f3fc530115",
+      "type": "Concat",
+      "next": [
+        "136abf3a-796a-f0be-e1b4-913f3e71e2d3"
+      ],
+      "prev": [
+        "07a7c714-34ee-800f-cd07-f74607370167",
+        "bb402e08-9de8-0e65-7dba-c62590758c9b"
+      ],
+      "name": "Concat",
+      "waitForAll": "",
+      "dim": "0",
+      "category": "Join"
+    },
+    "137acfd4-fde5-7948-c6d4-da520c84e075": {
+      "id": "137acfd4-fde5-7948-c6d4-da520c84e075",
+      "type": "Multivariate Gaussian",
+      "next": [
+        "f573a6cf-96f0-f9c8-ab7e-a23128fbae20"
+      ],
+      "prev": [
+        "83f04b2e-18a1-d2a3-0a96-1aea18efb550"
+      ],
+      "stdevActivation": "Softplus",
+      "size": "20",
+      "name": "Multivariate Gaussian",
+      "meanActivation": "",
+      "category": "Variational"
+    },
+    "a25382ad-2525-1819-8770-7e6978d98819": {
+      "id": "a25382ad-2525-1819-8770-7e6978d98819",
+      "type": "ReLU",
+      "next": [
+        "83f04b2e-18a1-d2a3-0a96-1aea18efb550"
+      ],
+      "prev": [
+        "3c33c222-d4ff-795a-2a7f-872154c28006"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "136abf3a-796a-f0be-e1b4-913f3e71e2d3": {
+      "id": "136abf3a-796a-f0be-e1b4-913f3e71e2d3",
+      "type": "Linear",
+      "next": [
+        "244c3d38-9672-50f1-86f1-f66bd5bae7c9"
+      ],
+      "prev": [
+        "1da4714e-6e06-4531-d72c-f2f3fc530115"
+      ],
+      "output": "256",
+      "input": "27",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "3c33c222-d4ff-795a-2a7f-872154c28006": {
+      "id": "3c33c222-d4ff-795a-2a7f-872154c28006",
+      "type": "Linear",
+      "next": [
+        "a25382ad-2525-1819-8770-7e6978d98819"
+      ],
+      "prev": [
+        "244c3d38-9672-50f1-86f1-f66bd5bae7c9"
+      ],
+      "output": "256",
+      "input": "256",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "244c3d38-9672-50f1-86f1-f66bd5bae7c9": {
+      "id": "244c3d38-9672-50f1-86f1-f66bd5bae7c9",
+      "type": "ReLU",
+      "next": [
+        "3c33c222-d4ff-795a-2a7f-872154c28006"
+      ],
+      "prev": [
+        "136abf3a-796a-f0be-e1b4-913f3e71e2d3"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "83f04b2e-18a1-d2a3-0a96-1aea18efb550": {
+      "id": "83f04b2e-18a1-d2a3-0a96-1aea18efb550",
+      "type": "Linear",
+      "next": [
+        "137acfd4-fde5-7948-c6d4-da520c84e075"
+      ],
+      "prev": [
+        "a25382ad-2525-1819-8770-7e6978d98819"
+      ],
+      "output": "40",
+      "input": "256",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    }
+  }
+}

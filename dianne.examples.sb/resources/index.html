@@ -1,0 +1,55 @@
+<link rel="icon" type="image/png" href="images/icon.png">
+
+<!-- Bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/dianne/ui/builder/css/bootstrap.min.css">
+<link rel="stylesheet" href="/dianne/ui/builder/css/jquery-ui.css">
+<!-- Styles -->
+<link rel="stylesheet" href="/dianne/ui/builder/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="/dianne/ui/builder/css/dianne.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="container-fluid">
+		<div id="canvas" class="row">
+			<div class="col-md-2">
+				<h4>Observation:</h4>
+				<canvas id='observation' width='256' height='256' style="border:1px solid #000000"></canvas>
+			</div>
+			<div class="col-md-2">
+				<h4>Prior</h4>		
+				<canvas id='prior' data-toggle="tooltip" title="" width='256' height='256' style="border:1px solid #000000"></canvas>
+			</div>
+			<div class="col-md-2">
+				<h4>Posterior</h4>
+				<canvas id='posterior' data-toggle="tooltip" title="" width='256' height='256' style="border:1px solid #000000"></canvas>
+			</div>
+			<div class="col-md-2">
+				<h4>Reconstruction</h4>	
+				<canvas id='reconstruction' width='256' height='256' style="border:1px solid #000000"></canvas>
+			</div>
+			<div class="col-md-4">
+				<h4>Surprise</h4>	
+				<div id='kl'></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/dianne/ui/builder/js/lib/jquery.min.js"></script>
+	<script src="/dianne/ui/builder/js/lib/bootstrap.min.js"></script>
+	<script src="/dianne/ui/builder/js/lib/jquery-ui.min.js"></script>
+	<script src="/dianne/ui/builder/js/lib/mustache.js"></script>
+	<script src="/dianne/ui/builder/js/lib/highcharts.js"></script>
+	<script src="/dianne/ui/builder/js/lib/highcharts-more.js"></script>
+	<script src="/dianne/ui/builder/js/dianne-visualize.js"></script>
+	<script src="/dianne/ui/builder/js/dianne-dialogs.js"></script>
+	<script src="js/sb.js"></script>
+	
+</body>
+</html>

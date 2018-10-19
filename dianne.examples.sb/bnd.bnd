@@ -1,0 +1,21 @@
+-buildpath: \
+	osgi.cmpn;version=6.0,\
+	osgi.core;version=6.0,\
+	be.iminds.iot.dianne.api;version=0.7,\
+	be.iminds.iot.dianne.rl.environment.kuka;version=0.7,\
+	be.iminds.iot.dianne.rl.agent;version=0.7,\
+	be.iminds.iot.dianne.tensor;version=0.7,\
+	be.iminds.iot.dianne.tensor.util;version=0.7,\
+	org.apache.felix.http.servlet-api;version=1.1.2,\
+	be.iminds.iot.robot.api;version=0.4,\
+	be.iminds.iot.sensor.api;version=0.4,\
+	be.iminds.iot.sensor.util;version=0.1,\
+	org.osgi.util.pushstream;version=1.0,\
+	org.osgi.util.function;version=1.1,\
+	org.osgi.util.promise;version=1.1,\
+	com.google.gson;version=2.2
+		
+Private-Package: dianne.examples.sb
+
+-includeresource: res=resources
+Bundle-Version: 1.0.0

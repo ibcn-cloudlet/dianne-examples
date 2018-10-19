@@ -1,0 +1,93 @@
+{
+  "name": "Policy",
+  "properties": {},
+  "modules": {
+    "5b68ea9b-7d43-ea0e-d12d-e7a5595f3019": {
+      "id": "5b68ea9b-7d43-ea0e-d12d-e7a5595f3019",
+      "type": "ReLU",
+      "next": [
+        "9d8e6081-c700-74d1-6993-f8458b10ec71"
+      ],
+      "prev": [
+        "928e2a11-8939-da82-e04f-683b194a6576"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    },
+    "6a9a21ea-1b10-e0ec-b464-adaf2bd07705": {
+      "id": "6a9a21ea-1b10-e0ec-b464-adaf2bd07705",
+      "type": "Output",
+      "prev": [
+        "9d8e6081-c700-74d1-6993-f8458b10ec71"
+      ],
+      "name": "Output",
+      "category": "Input-Output"
+    },
+    "0290e08a-4096-5f3c-7678-4e9c978d549c": {
+      "id": "0290e08a-4096-5f3c-7678-4e9c978d549c",
+      "type": "Linear",
+      "next": [
+        "758518c3-fa83-32f2-2623-ba2aa22be26b"
+      ],
+      "prev": [
+        "877da44e-26a2-e338-46f5-5078feb3790a"
+      ],
+      "output": "64",
+      "input": "20",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "9d8e6081-c700-74d1-6993-f8458b10ec71": {
+      "id": "9d8e6081-c700-74d1-6993-f8458b10ec71",
+      "type": "Linear",
+      "next": [
+        "6a9a21ea-1b10-e0ec-b464-adaf2bd07705"
+      ],
+      "prev": [
+        "5b68ea9b-7d43-ea0e-d12d-e7a5595f3019"
+      ],
+      "output": "7",
+      "input": "64",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "928e2a11-8939-da82-e04f-683b194a6576": {
+      "id": "928e2a11-8939-da82-e04f-683b194a6576",
+      "type": "Linear",
+      "next": [
+        "5b68ea9b-7d43-ea0e-d12d-e7a5595f3019"
+      ],
+      "prev": [
+        "758518c3-fa83-32f2-2623-ba2aa22be26b"
+      ],
+      "output": "64",
+      "input": "64",
+      "name": "Linear",
+      "category": "Layer",
+      "trainable": "true"
+    },
+    "877da44e-26a2-e338-46f5-5078feb3790a": {
+      "id": "877da44e-26a2-e338-46f5-5078feb3790a",
+      "type": "Input",
+      "next": [
+        "0290e08a-4096-5f3c-7678-4e9c978d549c"
+      ],
+      "name": "Input",
+      "category": "Input-Output"
+    },
+    "758518c3-fa83-32f2-2623-ba2aa22be26b": {
+      "id": "758518c3-fa83-32f2-2623-ba2aa22be26b",
+      "type": "ReLU",
+      "next": [
+        "928e2a11-8939-da82-e04f-683b194a6576"
+      ],
+      "prev": [
+        "0290e08a-4096-5f3c-7678-4e9c978d549c"
+      ],
+      "name": "ReLU",
+      "category": "Activation"
+    }
+  }
+}
