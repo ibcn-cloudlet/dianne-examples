@@ -1,0 +1,9 @@
+#
+# -Build REPO-
+# 
+
+-plugin.build.repo= \
+	aQute.bnd.repository.osgi.OSGiRepository; \
+		name=Build; \
+		locations=http://aiolos.intec.ugent.be/repositories/buildrepo/index.xml
+
