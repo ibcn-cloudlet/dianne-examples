@@ -43,3 +43,5 @@ g! start 51
 Neural Network service found!
 ```
 
+The resulting jar not only contains the computation graph and trained parameters of the model, but also provides metadata about the input it can process and the output it provides as _capabilities_. This way, a consumer bundle can declare _requirements_ that make a suitable NN model bundle resolve against these requirements.
+
